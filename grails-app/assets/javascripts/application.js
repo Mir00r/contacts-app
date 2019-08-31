@@ -6,7 +6,10 @@
 // to create separate JavaScript files as needed.
 //
 //= require jquery-3.3.1.min
+//= require jquery-confirm.min
 //= require bootstrap
 //= require popper.min
 //= require contacts
+//= require contacts.init
+//= require contacts.message.box
 //= require_self
