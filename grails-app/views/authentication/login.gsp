@@ -21,6 +21,7 @@
                             <g:passwordField name="password" class="form-control" placeholder="Password"
                                              required="required"/>
                             <g:submitButton class="btn btn-lg btn-primary btn-block" name="login" value="Login"/>
+                            <g:link controller="authentication" action="registration" class="btn btn-lg btn-primary btn-block">Member Registration</g:link>
                         </g:form>
                     </div>
                 </div>

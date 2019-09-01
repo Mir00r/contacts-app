@@ -28,15 +28,21 @@ class AuthenticationService {
         return false
     }
 
-
     def getMember() {
         def authorization = AppUtil.getAppSession()[AUTHORIZED]
         return authorization?.member
     }
 
-
     def getMemberName() {
         def member = getMember()
         return "${member.firstName} ${member.lastName}"
+    }
+
+    def isAdministratorMember() {
+        def member = getMember()
+        if (member && member.memberType == GlobalConfig.USER_TYPE.ADMINISTRATOR) {
+            return true
+        }
+        return false
     }
 }
