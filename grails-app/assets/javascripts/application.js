@@ -11,5 +11,6 @@
 //= require popper.min
 //= require contacts
 //= require contacts.init
+//= require contacts.ajax
 //= require contacts.message.box
 //= require_self

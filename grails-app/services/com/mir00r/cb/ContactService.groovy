@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest
 class ContactService {
 
     AuthenticationService authenticationService
+    ContactDetailsService contactDetailsService
 
     def save(GrailsParameterMap params, HttpServletRequest request) {
         Contact contact = new Contact(params)
@@ -15,6 +16,7 @@ class ContactService {
             contact.save(flush: true)
             if (!contact.hasErrors()) {
                 response.isSuccess = true
+                contactDetailsService.createOrUpdateDetails(contact, params)
             }
         }
         return response
@@ -27,6 +29,7 @@ class ContactService {
             contact.save(flush: true)
             if (!contact.hasErrors()) {
                 response.isSuccess = true
+                contactDetailsService.createOrUpdateDetails(contact, params)
             }
         }
         return response

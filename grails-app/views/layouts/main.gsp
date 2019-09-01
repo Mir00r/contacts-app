@@ -12,6 +12,7 @@
     <asset:javascript src="application.js"/>
 
     <script type="text/javascript">
+        CONTACTS.baseURL = "${UIHelper.appBaseURL()}";
         <g:if test="${flash?.message && flash?.message?.info}">
         jQuery(document).ready(function () {
             CONTACTS.messageBox.showMessage(Boolean(${flash.message?.success}), "${flash.message?.info}");
